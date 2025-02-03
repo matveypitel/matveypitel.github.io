@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Гостиница "Дом на набережной"</title>
+    <meta name="description" content="Контактная информация гостиницы 'Дом на набережной'. Адрес, телефон, email и схема проезда.">
+    <!-- Подключаем шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Верхняя панель с контактами и языками -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+77777777777"><i class="fas fa-phone"></i> +7 (777) 777-77-77</a>
+                <a href="mailto:info@hotel-waterfront.kz"><i class="fas fa-envelope"></i> info@hotel-waterfront.kz</a>
+            </div>
+            <div class="language-selector">
+                <button class="active">RU</button>
+                <button>KZ</button>
+                <button>EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Главное меню -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Waterfront Hotel">
+                </a>
+            </div>
+
+            <!-- Кнопка мобильного меню -->
+            <button class="mobile-menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <a href="rooms.html">Номера</a>
+                    <a href="services.html">Услуги</a>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="book-button">
+                <a href="#booking" class="btn btn-primary">Забронировать</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Контакты</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> 
+                    <span class="separator">/</span> 
+                    <span class="current">Контакты</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основная информация -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Адрес</h3>
+                        <p>ул. Набережная, 1</p>
+                        <p>г. Караганда, Казахстан</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Телефоны</h3>
+                        <p><a href="tel:+77777777777">+7 (777) 777-77-77</a></p>
+                        <p><a href="tel:+77777777778">+7 (777) 777-77-78</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@hotel-waterfront.kz">info@hotel-waterfront.kz</a></p>
+                        <p><a href="mailto:booking@hotel-waterfront.kz">booking@hotel-waterfront.kz</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Режим работы</h3>
+                        <p>Отдел бронирования:</p>
+                        <p>Пн-Вс: 09:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карта и форма -->
+        <section class="map-form-section">
+            <div class="container">
+                <div class="map-form-grid">
+                    <div class="map-container">
+                        <h2>Как добраться</h2>
+                        <div class="map-frame">
+                            <div id="map" style="height: 400px;"></div>
+                        </div>
+                        <div class="directions">
+                            <h3>Схема проезда</h3>
+                            <ul>
+                                <li><i class="fas fa-car"></i> На автомобиле: съезд с проспекта Независимости на улицу Набережная</li>
+                                <li><i class="fas fa-bus"></i> Общественным транспортом: автобусы №15, 33, 45 до остановки "Набережная"</li>
+                                <li><i class="fas fa-plane"></i> От аэропорта: 20 минут на такси</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h2>Свяжитесь с нами</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Тема</label>
+                                <select id="subject" name="subject">
+                                    <option value="booking">Бронирование</option>
+                                    <option value="info">Общая информация</option>
+                                    <option value="feedback">Отзыв</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>WATERFRONT</h4>
+                    <p>Уютный отдых в центре города</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-phone"></i> +7 (777) 777-77-77</li>
+                        <li><i class="fas fa-envelope"></i> info@hotel-waterfront.kz</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ул. Набережная, 1</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul class="footer-nav">
+                        <li><a href="rooms.html">Номера</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Следите за нами</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waterfront Hotel. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="js/main.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/header.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Координаты г. Караганда, ул. Набережная 10
+        var map = L.map('map').setView([49.8061, 73.0866], 15); // Координаты и масштаб
+    
+        // Добавляем тайлы карты OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Добавляем маркер
+        L.marker([49.8061, 73.0866]).addTo(map)
+            .bindPopup("Караганда, ул. Набережная 10")
+            .openPopup();
+    </script>
+</body>
+</html>

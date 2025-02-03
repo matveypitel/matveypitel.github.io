@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостиница "Дом на набережной" | Уютный отдых в центре города</title>
+    <meta name="description" content="Уютная гостиница в центре города. Комфортные номера, удобное расположение, специальные цены для транзитных пассажиров.">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Верхняя панель с контактами -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+77777777777"><i class="fas fa-phone"></i> +7 (777) 777-77-77</a>
+                <a href="mailto:info@hotel-waterfront.kz"><i class="fas fa-envelope"></i> info@hotel-waterfront.kz</a>
+            </div>
+            <div class="language-selector">
+                <button class="active">RU</button>
+                <button>KZ</button>
+                <button>EN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Главное меню -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Waterfront Hotel">
+                </a>
+            </div>
+
+            <!-- Кнопка мобильного меню -->
+            <button class="mobile-menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <a href="rooms.html">Номера</a>
+                    <a href="services.html">Услуги</a>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="book-button">
+                <a href="#booking" class="btn btn-primary">Забронировать</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero секция со слайдером -->
+        <section class="hero-slider">
+            <div class="slide active" style="background-image: url('images/hotel-facade.jpg')">
+                <div class="slide-content">
+                    <h2>Добро пожаловать в Дом на набережной</h2>
+                    <p>Уютный отдых в центре города</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/hotel-lobby.jpg')">
+                <div class="slide-content">
+                    <h2>Комфортные номера</h2>
+                    <p>Все условия для вашего отдыха</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/hotel-restaurant.jpg')">
+                <div class="slide-content">
+                    <h2>Ресторан с видом на реку</h2>
+                    <p>Изысканная кухня и прекрасные виды</p>
+                </div>
+            </div>
+            <!-- Навигация слайдера -->
+            <div class="slider-nav">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Форма бронирования -->
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <div class="booking-form">
+                    <h3>Забронировать номер</h3>
+                    <form class="booking-container">
+                        <div class="form-group">
+                            <label for="check-in">Заезд</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="check-in" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Выезд</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="check-out" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Гости</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <select id="guests">
+                                    <option value="1">1 гость</option>
+                                    <option value="2">2 гостя</option>
+                                    <option value="3">3 гостя</option>
+                                    <option value="4">4 гостя</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Найти номер</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Удобное расположение</h3>
+                        <p>В самом центре города</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <h3>Специальные цены</h3>
+                        <p>Для транзитных пассажиров</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>Бесплатный Wi-Fi</h3>
+                        <p>На всей территории</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные номера -->
+        <section class="rooms">
+            <div class="container">
+                <h2>Наши номера</h2>
+                <div class="rooms-grid">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="images/standard-room.jpg" alt="Стандартный номер">
+                        </div>
+                        <div class="room-info">
+                            <h3>Стандартный номер</h3>
+                            <div class="room-features">
+                                <span><i class="fas fa-user"></i> 2-3 гостя</span>
+                                <span><i class="fas fa-expand"></i> 25 м²</span>
+                            </div>
+                            <a href="rooms.html" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="images/business-room.jpg" alt="Бизнес номер">
+                        </div>
+                        <div class="room-info">
+                            <h3>Бизнес номер</h3>
+                            <div class="room-features">
+                                <span><i class="fas fa-user"></i> 2-3 гостя</span>
+                                <span><i class="fas fa-expand"></i> 35 м²</span>
+                            </div>
+                            <a href="rooms.html" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="images/luxe-room.jpg" alt="Люкс">
+                        </div>
+                        <div class="room-info">
+                            <h3>Люкс</h3>
+                            <div class="room-features">
+                                <span><i class="fas fa-user"></i> 4 гостя</span>
+                                <span><i class="fas fa-expand"></i> 45 м²</span>
+                            </div>
+                            <a href="rooms.html" class="btn btn-secondary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Футер -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>WATERFRONT</h4>
+                    <p>Уютный отдых в центре города</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-phone"></i> +7 (777) 777-77-77</li>
+                        <li><i class="fas fa-envelope"></i> info@hotel-waterfront.kz</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ул. Набережная, 1</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul class="footer-nav">
+                        <li><a href="rooms.html">Номера</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Следите за нами</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Waterfront Hotel. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>
