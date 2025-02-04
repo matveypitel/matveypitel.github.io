@@ -18,6 +18,21 @@
     color: var(--color-white);
 }
 
+.breadcrumbs a {
+    color: var(--color-white);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.breadcrumbs a:hover {
+    opacity: 1;
+}
+
+.breadcrumbs .separator {
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
 /* Основная информация */
 .contact-info-section {
     padding: 80px 0;
